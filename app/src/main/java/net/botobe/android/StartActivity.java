@@ -23,6 +23,6 @@ public class StartActivity extends Activity {
                 StartActivity.this.finish();
             }
 
-        }, 3000);
+        }, 2000);
     }
 }
