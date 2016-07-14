@@ -1,9 +1,9 @@
 package net.botobe.android;
 
 import android.app.Activity;
-import android.graphics.PixelFormat;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.WindowManager;
+import android.os.Handler;
 
 
 public class StartActivity extends Activity {
@@ -14,5 +14,15 @@ public class StartActivity extends Activity {
 
         setContentView(R.layout.start_main);
 
+        new Handler().postDelayed(new Runnable(){
+
+            @Override
+            public void run() {
+                Intent mainIntent = new Intent(StartActivity.this, MainActivity.class);
+                StartActivity.this.startActivity(mainIntent);
+                StartActivity.this.finish();
+            }
+
+        }, 3000);
     }
 }
